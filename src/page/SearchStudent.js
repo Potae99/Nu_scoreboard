@@ -5,7 +5,7 @@ function SearchStudent() {
     const [StudentID, setStudentID] = useState("");
 
     const ToStudentDetail = (StudentID) => {
-        window.location.href = "/StudentDetail/" + StudentID;
+        window.location.href = "StudentDetail/" + StudentID;
     };
 
     return (

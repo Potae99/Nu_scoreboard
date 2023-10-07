@@ -9,7 +9,7 @@ const routes = [
     element: <SearchStudent />,
   },
   {
-    path: '/StudentDetail/:StudentID/*',
+    path: 'StudentDetail/:StudentID/*',
     element: <StudentDetail />,
   },
 ];
