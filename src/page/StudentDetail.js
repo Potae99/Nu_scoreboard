@@ -13,7 +13,7 @@ function StudentDetail() {
 }
 
   const fetchData = () => {
-    axios.get(process.env.REACT_APP_API_URL + '/search', { params: { studentID: StudentID } })
+    axios.get(process.env.REACT_APP_API_URL + "/search", { params: { studentID: StudentID } })
       .then(res => {
         if (res.data.error === true) {
           console.log("ERROR FOUND");
