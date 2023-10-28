@@ -14,7 +14,7 @@ function SearchStudent() {
                 <h1 className=' text-center text-black text-3xl m-7'>Enter your studentID</h1>
                 <div className='grid grid-cols-1 place-items-center'>
                     <input className=' border border-black w-2/3 rounded-md bg-white py-3 px-6 text-black focus:border-black focus-shadow-md font-medium m-7'
-                        placeholder='ค้นหานิสิต...รหัสนิสิต'
+                        placeholder='studentID...'
                         onChange={(event) => {
                             setStudentID(event.target.value);
                         }}

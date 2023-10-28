@@ -36,7 +36,7 @@ function StudentDetail() {
     <>
       <div className='  space-y-4 min-h-screen bg-white border border-white'>
         <div>
-          <h1 className=' text-center text-4xl mt-4  font-bold text-black'>Quiz Results</h1>
+          <h1 className=' text-center text-4xl mt-4  font-bold text-black'>EPE Intermediate: Quiz Results</h1>
         </div>
         <div>
           <div className=' text-black space-y-6 space-x-4'>
@@ -74,7 +74,7 @@ function StudentDetail() {
                 <span class="absolute left-3 flex items-center justify-start w-10 h-10 duration-300 transform  group-hover:translate-x-3 ease">
                   <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </span>
-                <span class="relative">ค้นหาคะแนนเพิ่มเติม</span>
+                <span class="relative">home</span>
               </button>
 
             </div>
