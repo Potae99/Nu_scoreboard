@@ -36,7 +36,7 @@ function StudentDetail() {
     <>
       <div className='  space-y-4 min-h-screen bg-white border border-white'>
         <div>
-          <h1 className=' text-center text-4xl mt-4  font-bold text-black'>คะแนนนิสิต</h1>
+          <h1 className=' text-center text-4xl mt-4  font-bold text-black'>Quiz Results</h1>
         </div>
         <div>
           <div className=' text-black space-y-6 space-x-4'>
@@ -46,89 +46,25 @@ function StudentDetail() {
                 <p>{StudentDetail.name}</p>
               </div>
             </div>
-            <div className=' text-black space-y-6 bg-slate-300 rounded-lg '>
+            <div className=' text-black  space-y-6 bg-slate-300 rounded-lg '>
               <div className=' bg- gap-5 place-content-center flex justify-center '>
                 <div className=" text-black mt-6  stats stats-vertical lg:stats-horizontal shadow">
 
                   <div className="stat  bg-white">
-                    <div className="text-black stat-title">Quizzes 1</div>
-                    <div className="stat-value">{StudentDetail.quiz1}/20</div>
-
-                  </div>
-
-                  <div className="stat bg-white">
-                    <div className="text-black stat-title">Quizzes 2</div>
-                    <div className="stat-value">{StudentDetail.quiz2}/20</div>
-
-                  </div>
-                  <div className="stat bg-white">
-                    <div className="text-black stat-title">Quizzes 3</div>
-                    <div className="stat-value">{StudentDetail.quiz3}/20</div>
+                    <div className="text-black stat-title">Quiz</div>
+                    <div className="stat-value">{StudentDetail.quiz}/30</div>
 
                   </div>
                 </div>
               </div>
               <div className='   flex place-content-center  justify-center'>
                 <div className=' space-x-4 w-full place-content-center  justify-center flex mb-6'>
-                  <div className=" border card w-96 bg-white">
-                    <div className="card-body ">
-                      <h2 className="card-title">Quizzes Total</h2>
-                      <p className='text-4xl  '>{StudentDetail.quiztotal}/60</p>
-                    </div>
-                  </div>
-                  <div className=" border card w-96 bg-white ">
+                  <div className=" border card  bg-white ">
                     <div className="card-body">
-                      <h2 className="card-title">Quizzes Percent</h2>
-                      <p className='text-4xl' >{StudentDetail.quizpercent}/10</p>
+                      <h2 className="card-title">Percentage</h2>
+                      <p className='text-4xl text-center font-bold' >{StudentDetail.percent}/10</p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className='space-y-6 bg-slate-300 rounded-lg'>
-              <div className=' gap-5 place-content-center flex justify-center '>
-                <div className=" text-black  mt-6  stats stats-vertical lg:stats-horizontal shadow">
-
-                  <div className="stat bg-white">
-                    <div className="text-black stat-title">Assigments 1</div>
-                    <div className="stat-value">{StudentDetail.assign1}/1</div>
-
-                  </div>
-
-                  <div className="stat bg-white">
-                    <div className="text-black stat-title">Assigments 2</div>
-                    <div className="stat-value">{StudentDetail.assign2}/1</div>
-
-                  </div>
-                  <div className="stat bg-white">
-                    <div className="text-black stat-title">Assigments 3</div>
-                    <div className="stat-value">{StudentDetail.assign3}/1</div>
-
-                  </div>
-                </div>
-              </div>
-              <div className=' space-x-4 flex place-content-center  justify-center'>
-                <div className='space-x-4 place-content-center  justify-center w-full flex mb-6'>
-                  <div className="  border bg-white  card w-96 ">
-                    <div className="  card-body">
-                      <h2 className="card-title">Assignments Total</h2>
-                      <p className='text-4xl'>{StudentDetail.assigntotal}/3</p>
-                    </div>
-                  </div>
-                  <div className="card border w-96 bg-white ">
-                    <div className="card-body">
-                      <h2 className="card-title">Assignments Percent</h2>
-                      <p className='text-4xl'>{StudentDetail.assignpercent}/10</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='place-content-center flex justify-center'>
-              <div className="card  bor w-96 bg-neutral text-neutral-content">
-                <div className="card-body items-center text-center">
-                  <h2 className="card-title text-white">Grand Total</h2>
-                  <p className='text-4xl text-white'>{StudentDetail.grandtotal}/20</p>
                 </div>
               </div>
             </div>
