@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchStudent from './page/SearchStudent';
 import StudentDetail from './page/StudentDetail';
+import Login from './component/Login';
 
 const routes = [
   {
@@ -11,6 +12,10 @@ const routes = [
   {
     path: 'StudentDetail/:StudentID/*',
     element: <StudentDetail />,
+  },
+  {
+    path: 'login',
+    element: <Login />,
   },
 ];
 

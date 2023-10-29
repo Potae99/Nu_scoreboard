@@ -1,16 +1,42 @@
+import axios from 'axios';
 import React, { useState } from 'react'
+import Swal from 'sweetalert2';
 
 function SearchStudent() {
 
     const [StudentID, setStudentID] = useState("");
 
-    const ToStudentDetail = (StudentID) => {
-        window.location.href = "StudentDetail/" + StudentID;
+    const ToStudentDetail = async (StudentID) => {
+        try {
+            const response = await axios.get(process.env.REACT_APP_API_URL + '/search', { params: { studentID: StudentID } });
+            if (response.data.error === true) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'ไม่พบรหัสนิสิตของท่าน',
+                    text: 'โปรดกรอกรหัสนิสิตอีกครั้ง',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+                return;
+            }
+            window.location.href = "StudentDetail/" + StudentID;
+        } catch (error) {
+            console.error();
+        }
+    };
+
+    const ToLogin = () => {
+        window.location.href = 'login';
     };
 
     return (
         <>
             <div className=' min-h-screen bg-white border border-white'>
+                <div className=' flex justify-end items-end mr-4 mt-4'>
+                    <button onClick={ToLogin} className=' bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+                        login
+                    </button>
+                </div>
                 <h1 className=' text-center text-black text-3xl m-7'>Enter your studentID</h1>
                 <div className='grid grid-cols-1 place-items-center'>
                     <input className=' border border-black w-2/3 rounded-md bg-white py-3 px-6 text-black focus:border-black focus-shadow-md font-medium m-7'
