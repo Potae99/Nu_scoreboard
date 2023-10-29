@@ -8,9 +8,9 @@ function Upload() {
     const [FileDowload, setfileDowload] = useState("");
 
     ///Go home
-     const Home = (event) => {
-        window.location.href="/"
-     }
+    const Home = (event) => {
+        window.location.href = "/"
+    }
 
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0];
@@ -39,7 +39,7 @@ function Upload() {
                 // Handle error while downloading
             });
     };
-    
+
 
     const handleFileUpload = async (event) => {
         event.preventDefault();
@@ -64,13 +64,13 @@ function Upload() {
                 title: 'File uploaded successfully',
                 showConfirmButton: false,
                 timer: 1500,
-                
+
             }).then(() => {
                 // Redirect to the homepage after the success alert is closed
                 window.location.href = "Upload3692581470";
             });
-            
-            
+
+
         } catch (error) {
             Swal.fire({
                 icon: 'error',
@@ -80,10 +80,10 @@ function Upload() {
             });
             // Handle error
         }
-        
+
     };
 
-    console.log(uploadFile);
+    // console.log(uploadFile);
 
     return (
         <div className="h-screen font-sans text-gray-900 bg-gray-300 border-box">
@@ -93,21 +93,21 @@ function Upload() {
                         <h2 className="text-2xl font-semibold mb-2">Upload your files</h2>
                         <p className="text-xs text-gray-500">File should be of format .exls</p>
                     </div>
-                    <form onSubmit={handleFileUpload} className="relative w-4/5 max-w-xs mb-10 bg-white rounded-lg shadow-inner">
+                    <div className="relative w-4/5 max-w-xs mb-10 bg-white rounded-lg shadow-inner">
                         <input type="file" id="file-upload" onChange={handleFileChange} className="hidden" />
                         <label htmlFor="file-upload" className="z-20 flex flex-col items-center justify-center w-full h-auto cursor-pointer">
-                            <p className="text-xs font-light text-center text-gray-500 mb-2">{fileName ? fileName : "Drag & Drop your files here"}</p>
+                            <p className="text-xs font-light text-center text-gray-500 mb-2">{fileName ? fileName : "Click here"}</p>
                             <svg className="w-8 h-8 text-indigo-400 mb-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
                             </svg>
                         </label>
                         <div className=' flex flex-col justify-center ml-16 mr-16'>
-                        <button type="submit" className="w-50  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload</button>
-                        <button1 onClick={fileDownload}  className="w-50 mt-4 text-center  bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Dowload</button1>
-                        <button2 onClick={Home}  className="w-50 mt-4 text-center  bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Home</button2>
+                            <button onClick={handleFileUpload} className="w-50  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload</button>
+                            <button onClick={fileDownload} className="w-50 mt-4 text-center  bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Dowload</button>
+                            <button onClick={Home} className="w-50 mt-4 text-center  bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Home</button>
                         </div>
-                    </form>
-                    
+                    </div>
+
                 </div>
             </div>
         </div>
