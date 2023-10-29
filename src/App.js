@@ -4,7 +4,6 @@ import SearchStudent from './page/SearchStudent';
 import StudentDetail from './page/StudentDetail';
 import Login from './component/Login';
 import Upload from './page/Upload';
-import FileManagement from './page/FileManagement';
 
 const routes = [
   {
@@ -23,10 +22,6 @@ const routes = [
     path: 'Upload3692581470',
     element: <Upload />,
   },
-  {
-    path: 'file/management',
-    element: <FileManagement />
-  }
 ];
 
 function App() {

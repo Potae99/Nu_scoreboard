@@ -38,7 +38,7 @@ function Login() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            window.location.href = 'file/management';
+            window.location.href = 'Upload3692581470';
         } catch (error) {
             console.error(error);
         }
