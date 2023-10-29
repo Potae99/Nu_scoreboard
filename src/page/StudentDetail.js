@@ -10,7 +10,7 @@ function StudentDetail() {
 
   const ToSearchStudent = () => {
     window.location.href = "/"
-}
+  }
 
   const fetchData = () => {
     axios.get(process.env.REACT_APP_API_URL + "/search", { params: { studentID: StudentID } })
@@ -76,7 +76,6 @@ function StudentDetail() {
                 </span>
                 <span class="relative">home</span>
               </button>
-
             </div>
             <div className='place-content-center flex justify-center' >
             </div>

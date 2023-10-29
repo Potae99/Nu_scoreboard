@@ -12,8 +12,6 @@ function Upload() {
     const [fileName, setFileName] = useState(""); // เพิ่ม state เก็บชื่อไฟล์
     const [FileDowload, setfileDowload] = useState("");
 
-    console.log(isLogined);
-
     if (!isLogined) {
         return window.location.href = 'login';
     }
@@ -78,7 +76,7 @@ function Upload() {
 
             }).then(() => {
                 // Redirect to the homepage after the success alert is closed
-                window.location.href = "Upload3692581470";
+                window.location.href = "/Upload";
             });
 
 
