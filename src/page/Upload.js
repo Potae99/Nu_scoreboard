@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { useLocation } from 'react-router-dom';
 
 function Upload() {
+
+    const location = useLocation();
+    const { isLogined } = location.state || false;
+
     const [uploadFile, setUploadFile] = useState(undefined);
     const [fileName, setFileName] = useState(""); // เพิ่ม state เก็บชื่อไฟล์
     const [FileDowload, setfileDowload] = useState("");
+
+    console.log(isLogined);
+
+    if (!isLogined) {
+        return window.location.href = 'login';
+    }
 
     ///Go home
     const Home = (event) => {

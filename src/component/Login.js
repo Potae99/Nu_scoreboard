@@ -1,11 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [isLogined, setIsLogined] = useState(false);
+    const navigate = useNavigate();
 
     const handleUsernameChange = (e) => {
         setUsername(e.target.value);
@@ -32,13 +35,15 @@ function Login() {
                 })
                 return;
             }
+            setIsLogined(true);
             await Swal.fire({
                 icon: 'success',
                 title: 'Login Complete',
                 showConfirmButton: false,
                 timer: 2000
             });
-            window.location.href = 'Upload3692581470';
+            // window.location.href = 'Upload3692581470/';
+            navigate('/Upload3692581470', { state: { isLogined: true } });
         } catch (error) {
             console.error(error);
         }

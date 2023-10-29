@@ -19,7 +19,7 @@ const routes = [
     element: <Login />,
   },
   {
-    path: 'Upload3692581470',
+    path: '/Upload3692581470',
     element: <Upload />,
   },
 ];
